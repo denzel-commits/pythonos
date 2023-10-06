@@ -1,2 +1,6 @@
+
 venv
+venv310
+*.save
+output
 __pycache__
