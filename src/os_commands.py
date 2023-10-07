@@ -4,7 +4,7 @@ from src.base_command import BaseCommand
 class OsCommands(BaseCommand):
     @staticmethod
     def users():
-        return BaseCommand.cmd_run(["awk", "-F:", "{print $1}", "/etc/passwd"])
+        return set(BaseCommand.cmd_run(["ps", "-eo", "user", "--no-headers"]))
 
     @staticmethod
     def total_procs():
